@@ -1,0 +1,23 @@
+// My Project Colours.
+// -------------------------------------
+$mkdo-nhs-theme--primary            : salmon;
+$mkdo-nhs-theme--dark-primary       : darken( $mkdo-nhs-theme--primary, 15% );
+$mkdo-nhs-theme--secondary          : cornflowerblue;
+$mkdo-nhs-theme--dark-secondary     : darken( $mkdo-nhs-theme--secondary, 15% );
+
+// Greyscale
+$mkdo-nhs-theme--dark               : #404C4F;
+$mkdo-nhs-theme--dark-o             : rgba($mkdo-nhs-theme--dark, 0.7);
+$mkdo-nhs-theme--grey               : #788C91;
+$mkdo-nhs-theme--offwhite           : #F5F5F5;
+$mkdo-nhs-theme--white              : #FFFFFF;
+
+
+// Colours.
+// -------------------------------------
+$kp-colour-body--background     : $mkdo-nhs-theme--offwhite !default;
+$kp-colour-content--copy        : $mkdo-nhs-theme--dark !default;
+$kp-colour-content--heading     : $mkdo-nhs-theme--dark !default;
+$kp-colour-content--link        : $mkdo-nhs-theme--dark-secondary !default;
+$kp-colour-content--link-hover  : $mkdo-nhs-theme--secondary !default;
+$kp-colour-content--link-visited: $mkdo-nhs-theme--dark-secondary !default;

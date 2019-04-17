@@ -1,0 +1,124 @@
+@mixin button {
+	@include kp-reset-button;
+	padding: kp-rem(12px) kp-rem(20px);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: $global--border-radius-small;
+	vertical-align: top;
+	transition: $global--transition;
+
+	font-weight: 400;
+	line-height: 1em;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	// Buttons with icons also use span for text
+	& > span {line-height: 1em;}
+
+	min-width: kp-rem(115px);
+
+	&:before, &:after {
+		content: none;
+	}
+
+	svg {
+		fill: currentColor;
+		transition: $global--transition;
+		width: 1em;
+		height: 1em;
+		margin-right: $global--spacing-xs;
+	}
+
+	@include kp-on-event() {
+		text-decoration: none;
+	}
+
+	&.button--disabled,
+	&:disabled {
+		background-color: lighten($mkdo-nhs-theme--grey, 15%);
+		opacity: 0.3;
+		pointer-events: none;
+		color: $mkdo-nhs-theme--dark;
+		box-shadow: 0 0 0 1px lighten($mkdo-nhs-theme--grey, 15%) inset;
+		svg {fill: $mkdo-nhs-theme--dark;}
+		@include kp-on-event {
+			background-color: lighten($mkdo-nhs-theme--grey, 15%);
+			box-shadow: 0 0 0 1px lighten($mkdo-nhs-theme--grey, 15%) inset;
+			color: $mkdo-nhs-theme--dark;
+			svg {fill: $mkdo-nhs-theme--dark;}
+		}
+	}
+
+}
+
+.button,
+.button--primary,
+[type="reset"],
+[type="submit"]  {
+	@include button;
+	color: $mkdo-nhs-theme--white;
+	background-color: $mkdo-nhs-theme--primary;
+	svg {fill: $mkdo-nhs-theme--white;}
+	@include kp-on-event {
+		color: $mkdo-nhs-theme--white;
+		background-color: $mkdo-nhs-theme--dark-primary;
+		svg {fill: $mkdo-nhs-theme--white;}
+	}
+}
+
+.button--secondary {
+	@include button;
+	color: $mkdo-nhs-theme--white;
+	background-color: $mkdo-nhs-theme--secondary;
+	svg {fill: $mkdo-nhs-theme--white;}
+	@include kp-on-event {
+		color: $mkdo-nhs-theme--white;
+		background-color: $mkdo-nhs-theme--dark-secondary;
+		svg {fill: $mkdo-nhs-theme--white;}
+	}
+}
+
+.button--grey {
+	@include button;
+	color: $mkdo-nhs-theme--white;
+	background-color: $mkdo-nhs-theme--grey;
+	svg {fill: $mkdo-nhs-theme--white;}
+	@include kp-on-event {
+		color: $mkdo-nhs-theme--white;
+		background-color: $mkdo-nhs-theme--dark;
+		svg {fill: $mkdo-nhs-theme--white;}
+	}
+}
+
+@mixin button-ghost {
+	@include button;
+	min-width: kp-rem(150px);
+	padding: kp-rem(8px) kp-rem(20px);
+}
+
+.button--ghost-dark {
+	@include button-ghost;
+	color: $mkdo-nhs-theme--dark;
+	box-shadow: 0 0 0 1px $mkdo-nhs-theme--dark inset;
+	background-color: transparent;
+	svg {fill: $mkdo-nhs-theme--dark;}
+	@include kp-on-event {
+		color: $mkdo-nhs-theme--white;
+		background-color: $mkdo-nhs-theme--dark;
+		svg {fill: $mkdo-nhs-theme--white;}
+	}
+}
+
+.button--ghost-white {
+	@include button-ghost;
+	color: $mkdo-nhs-theme--white;
+	box-shadow: 0 0 0 1px $mkdo-nhs-theme--white inset;
+	background-color: transparent;
+	svg {fill: $mkdo-nhs-theme--white;}
+	@include kp-on-event {
+		color: $mkdo-nhs-theme--dark;
+		background-color: $mkdo-nhs-theme--white;
+		svg {fill: $mkdo-nhs-theme--dark;}
+	}
+}
