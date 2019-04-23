@@ -1,0 +1,44 @@
+// Form styles.
+// --------------------------------------------------------------------------
+
+// Form fields.
+// -------------------------------------
+[type="tel"],
+[type="text"],
+[type="email"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="url"],
+textarea {
+	appearance: none;
+	background-color: $mkdo-nhs-theme--offwhite;
+	border-radius: $global--border-radius-small;
+	border: 1px solid $mkdo-nhs-theme--offwhite;
+	color: $mkdo-nhs-theme--dark;
+	padding: kp-rem(8px);
+	transition-property: background-color, color, border-color, opacity;
+	transition-duration: 300ms;
+	transition-timing-function: ease-in-out;
+
+	&:focus {
+		background-color: $mkdo-nhs-theme--white;
+		border-color: $mkdo-nhs-theme--secondary;
+		color: $mkdo-nhs-theme--dark;
+	}
+}
+
+select {
+	border: 1px solid $mkdo-nhs-theme--offwhite;
+	color: $mkdo-nhs-theme--dark;
+	padding: kp-rem(8px);
+}
+
+// Forms - Placeholder Styles.
+$kp-ph--styles: (color: $mkdo-nhs-theme--dark-o, opacity: 1) !default;
+
+input {@include kp-placeholder-styles($kp-ph--styles);}
+
+textarea {@include kp-placeholder-styles($kp-ph--styles);
+	height: kp-rem(150px);
+}
