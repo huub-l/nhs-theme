@@ -31,18 +31,6 @@
 
 	</header>
 
-	<div class="entry-content">
-
-		<?php
-		do_action( 'kapow_before_post_excerpt' );
-
-		the_excerpt();
-
-		do_action( 'kapow_after_post_excerpt' );
-		?>
-
-	</div>
-
 	<footer class="entry-footer">
 
 		<div class="entry-meta">
