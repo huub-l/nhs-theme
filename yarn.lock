@@ -5841,10 +5841,10 @@ neo-async@^2.5.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
   integrity sha512-MFh0d/Wa7vkKO3Y3LlacqAEeHK0mckVqzDieUKTT+KGxi+zIpeVsFxymkIiRpbpDziHc290Xr9A1O4Om7otoRA==
 
-nhsuk-frontend@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/nhsuk-frontend/-/nhsuk-frontend-1.0.0.tgz#fa0ba669bab789d0ef42e96184d86fae881b7b0a"
-  integrity sha512-fj06+OCGFXbPeIcnDOSrDDyFDc91mZq53OhRdjrmjcxGy6hCICpx44GT4DXELFxhYkyARfm5hAtakC4bpF5kwQ==
+nhsuk-frontend@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/nhsuk-frontend/-/nhsuk-frontend-2.1.0.tgz#331ab87150082a370b49562d4200ee0c2efeb62c"
+  integrity sha512-CLz/vxgJnoeVfc8bXUoEA57VdY/qCpADntRVRZjUyFrZmveD/Uf4+uKBwBmIqxN2Yd0/E+eARdeXBtadf+iMmw==
   dependencies:
     accessible-autocomplete "^1.6.2"
     sass-mq "^4.0.2"
