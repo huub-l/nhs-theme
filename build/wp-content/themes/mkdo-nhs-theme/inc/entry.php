@@ -14,13 +14,13 @@ function kapow_entry_info() {
 	$time_kapow_string = sprintf(
 		$time_kapow_string,
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() )
+		esc_html( get_the_date( 'l F j Y' ) )
 	);
 
 	$posted_on = sprintf(
 		/* translators:  1: date the post was published. */
-		esc_html_x( 'Posted on %s', 'post date', 'mkdo-nhs-theme' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_kapow_string . '</a>'
+		esc_html_x( '%s', 'post date', 'mkdo-nhs-theme' ),
+		$time_kapow_string
 	);
 
 	$byline = sprintf(
